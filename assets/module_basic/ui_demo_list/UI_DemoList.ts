@@ -8,6 +8,7 @@ import { tgxUIController, tgxUIMgr, tgxUIWaiting } from "../../core_tgx/tgx";
 const DemoList = [
     { bundle: ModuleDef.DEMO_TANK, entryScene: 'tank_game' },
     { bundle: ModuleDef.DEMO_ROOSTER, entryScene: 'rooster_jump' },
+    { bundle: ModuleDef.DEMO_SNAKE, entryScene: 'snake_game' },
 ];
 
 export class UI_DemoList extends tgxUIController {

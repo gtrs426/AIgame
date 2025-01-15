@@ -2,7 +2,7 @@ import { _decorator, assetManager, AudioClip, Component, Node } from 'cc';
 import { tgxAudioMgr } from '../core_tgx/tgx';
 import { ModuleDef } from '../scripts/ModuleDef';
 
-const BundleName = ModuleDef.DEMO_TANK;
+const BundleName = ModuleDef.DEMO_SNAKE;
 
 export class SnakeGameAudioMgr {
     /**
