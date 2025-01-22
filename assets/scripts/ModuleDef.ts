@@ -3,5 +3,6 @@ export class ModuleDef {
     public static DEMO_ROOSTER = 'module_demo_rooster';
     public static DEMO_TANK = 'module_demo_tank';
     public static DEMO_SNAKE = 'module_snake';
+    public static DEMO_PONG = 'module_pong';
     public static EXTRA = 'module_extra';
 }

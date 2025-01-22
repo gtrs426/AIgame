@@ -40,7 +40,7 @@ export class SnakeController extends Component {
             food.setWorldRotation(this.node.worldRotation);
             food.getComponent(Food).moveDir = this._movement2d.moveDir;
 
-            SnakeGameAudioMgr.playOneShot('sounds/sfx_shoot', 1.0);
+            // SnakeGameAudioMgr.playOneShot('sounds/sfx_shoot', 1.0);
 
             //animation
             let oldPosX = this.barrel.position.x;

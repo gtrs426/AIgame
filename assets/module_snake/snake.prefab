@@ -179,7 +179,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615@0fab2",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae@0fab2",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -195,7 +195,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "_id": ""
@@ -318,7 +318,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615@0fab2",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae@0fab2",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -334,7 +334,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "_id": ""
@@ -457,7 +457,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615@fc066",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae@fc066",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -473,7 +473,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "_id": ""
@@ -647,7 +647,7 @@
       "a": 255
     },
     "_spriteFrame": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615@16efd",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae@16efd",
       "__expectedType__": "cc.SpriteFrame"
     },
     "_type": 0,
@@ -663,7 +663,7 @@
     "_isTrimmedMode": true,
     "_useGrayscale": false,
     "_atlas": {
-      "__uuid__": "9a1dfba3-d370-4471-8d50-ef8ad01f0615",
+      "__uuid__": "5a4eebb6-3d3d-45dc-acb5-8b6476fd9aae",
       "__expectedType__": "cc.SpriteAtlas"
     },
     "_id": ""
@@ -867,6 +867,7 @@
       "__id__": 0
     },
     "fileId": "b5GBmUyRxLL4Js3qZ1K1Zv",
-    "instance": null
+    "instance": null,
+    "targetOverrides": null
   }
 ]
