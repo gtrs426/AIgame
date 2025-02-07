@@ -30,9 +30,9 @@ export class Ball extends Component {
 
     reset() {
         // 重置位置到场景中心
-        this.node.setPosition(-315, 0);
+        this.node.setPosition(0, -315);
         // 生成30°~150°的随机角度（转换为弧度）并确保向右方向
-        const angle = (Math.random() * 120 + 30) * Math.PI / 180;
+        const angle = (180 + 45) * Math.PI / 180;
         this._velocity = v2(
             Math.sin(angle) * this.initialSpeed,
             -Math.cos(angle) * this.initialSpeed
@@ -53,7 +53,7 @@ export class Ball extends Component {
         );
 
         // 检查是否掉落到底部
-        if (pos.y < -400) { // 假设屏幕底部为-400
+        if (pos.y < 0) { // 假设屏幕底部为0
             const gameController = this.node.parent.getComponent(PongController);
             if (gameController) {
                 gameController.onBallDrop();
@@ -63,7 +63,7 @@ export class Ball extends Component {
 
     onBeginContact(selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
         // 播放碰撞音效
-        PongGameAudioMgr.playOneShot('sounds/hit', 1.0);
+        PongGameAudioMgr.playOneShot('sounds/sfx_shoot', 1.0);
 
         // 根据碰撞调整球的方向
         const normal = contact.getManifold()!.localNormal.clone().normalize();
