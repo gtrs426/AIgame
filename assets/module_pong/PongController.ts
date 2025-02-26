@@ -8,6 +8,8 @@ import {
   instantiate,
   Label,
   director,
+  UITransform,
+  Color,
 } from "cc";
 import { Ball } from "./Ball";
 import { tgxEasyController, tgxEasyControllerEvent } from "../core_tgx/tgx";
@@ -28,34 +30,34 @@ export class PongController extends Component {
   paddle: Node;
 
   private _score: number = 0;
+  private _gameOver: boolean = false;
   // 明确声明球事件回调方法
   public onBallHit: () => void = () => {
     this._score++;
+    console.log("球被击中，得分+1");
     if (this.scoreLabel) {
       this.scoreLabel.string = "得分: " + this._score;
     }
   };
   public onBallDrop: () => void = () => {
-    this._score = 0;
-    if (this.scoreLabel) {
-      this.scoreLabel.string = "得分: " + this._score;
-    }
+    this._gameOver = true;
+    console.log("球掉落");
   };
   start() {
     // 初始化游戏
-    this.resetGame();
-
+    this.startGame();
     // 监听控制器事件
     tgxEasyController.on(tgxEasyControllerEvent.BUTTON, this.onStart, this);
   }
 
-  resetGame() {
+  startGame() {
+    if (!this._gameOver) return;
+    this._gameOver = false;
     // 1.重置得分
     this._score = 0;
     if (this.scoreLabel) {
       this.scoreLabel.string = "得分: 0";
     }
-
     // 2.重置球位置
     const ball = this.ball.getComponent("Ball") as Ball;
     if (ball) {
@@ -71,7 +73,7 @@ export class PongController extends Component {
 
   onStart(btnSlot: string) {
     if (btnSlot === "btn_slot_0") {
-      this.resetGame();
+      this.startGame();
     }
   }
 

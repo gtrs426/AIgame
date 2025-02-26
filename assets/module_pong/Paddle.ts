@@ -20,16 +20,6 @@ const tempV2 = v2();
 export class Paddle extends Component {
   @property
   moveSpeed: number = 100;
-
-  @property
-  needRotation: boolean = false;
-
-  @property(Node)
-  leftWall: Node;
-
-  @property(Node)
-  rightWall: Node;
-
   private _minX: number = -650;
   private _maxX: number = 650;
 
@@ -41,13 +31,6 @@ export class Paddle extends Component {
       this.onMovementStop,
       this
     );
-    // 在墙体节点的组件脚本中添加：
-    const collider = this.getComponent(BoxCollider2D);
-    if (collider) {
-      console.log(
-        `[物理] ${this.node.name} 碰撞体配置完成 尺寸：${collider.size}`
-      );
-    }
   }
 
   reset() {
@@ -68,9 +51,6 @@ export class Paddle extends Component {
 
   onMovement(degree, strengthen) {
     let angle = (degree / 180) * Math.PI;
-    if (this.needRotation) {
-      this.node.setRotationFromEuler(0, 0, degree);
-    }
     this._moveDir.set(Math.cos(angle), Math.sin(angle));
     this._moveDir.normalize();
     this._moveFactor = strengthen;
